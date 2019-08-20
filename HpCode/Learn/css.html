@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HPCODERS-CSS</title>
+<link rel="stylesheet" type="text/css" href="../home.css">
+<style type="text/css">
+	
+	aside{
+		background-color: #fafafa;
+	}
+	aside:before{
+		content: "Displays";
+	}
+	ol,ul{list-style: none;list-style-position: inside;}
+
+	.css{font-size: 20px;color: #a23;}
+</style>
+</head>
+<body class="text-center">
+<h1>Documentation Of CSS <small>HPCODERS</small></h1>
+<a href="http://www.hpcoders.com"><button>HPCODERS Home</button></a> </a><a href="https://css-tricks.com/almanac/" target="_blank"><button>All CSS Styles</button></a>
+<h2>CSS add's style's to your HTML elements that allow's you to manipulate there placement.</h2>
+
+<p>There are 3 Main Ways to target HTML elements.</p>
+
+<ol>
+	<h3>Targeting Tag</h3>
+	<li>
+	<p>Im going to give a Header tag the styles of color:red; and background of gray;</p>
+<pre>
+	<code>
+		<span class="css">CSS</span>
+
+		h1 {
+			color: red;
+			background-color: blue; /*This color is selected using Hexidecimal numbers.   ff  ff  ff   or RR GG YY. As you change the values the amount of Red Green or Yellow they change color*/
+		}
+	</code>
+	<h1 style="color: red; background-color: blue;">This h1 tag has a color of red and background of blue!</h1>
+</pre>
+	<h2>Find your favorite color!</h2>
+	<input type="color" name="" title="color-picker" style="height: 100px;width: 100px;">
+	<p>You can do this with any tag. But this will target all instances that the tag is in the HTML as long as it does not have a class or id.<br> Let me target all paragraphs and make there color green and font-size!</p>
+<pre>
+	<code>
+		<span class="css">CSS</span>
+		p {
+			font-size:24px; // Font-size is mainly used with (px) or pixels
+			color:green;
+		}
+	</code>
+	<p style="color: green; font-size: 24px;">This Paragraph text is green with a font of 24 pixels</p>
+</pre>
+	<h2>Classes and ID's</h2>
+	<ol>
+	<h3>Classes (.)</h3>
+		<li>
+		<b>You can apply a class to multiple HTML elements.</b>
+		</li>
+		<pre>
+		HTML
+			&lt;p class="className"&gt; Text here &lt;/p&gt;
+		CSS
+		.className{
+			color:red;
+			font-size:30px;
+			background-color:gray;
+		}
+		</pre>
+		<p style="background-color: gray; font-size: 30px; color: red;"> Text Here</p>
+	<h3>ID's (#)</h3>
+		<li>
+			ID's can only be used once on a <b>webpage</b>. Use these cautiously for something like the logo.
+		</li>
+		<pre>
+		HTML
+			&lt;p id="idName"&gt; Text here &lt;/p&gt;
+		CSS
+		#idName{
+			color:green;
+			font-size:16px;
+			background-color:orange;
+		}
+		</pre>
+		<p style="background-color: orange; font-size: 16px; color: green;"> Text Here</p>
+	</ol>
+	<h1>Box Model</h1>
+	<p>By far Box Model is the hardest thing you'll learn in CSS. But as your create more pages, you will get used to it.</p>
+	<a href="http://www.w3schools.com/css/css_boxmodel.asp" target="_blank">W3 Box Model</a>
+	<img src="">
+	<h2>If you get this your good!</h2>
+	<h3>Extra styles</h3>
+	<ol>
+		<li>color: #ffffff;</li>
+		<li>background-color: #fffff;</li>
+		<li>font-size: #px;</li>
+		<li>font-family: 'Verdana' , Garamond;</li>
+		<li>border-width: #px;</li>
+		<li>border-color: #ffffff;</li>
+		<li>border-style: solid | double | groove | ridge | ext..;</li>
+		<li>line-height: #em;</li>
+		<li>height: #;</li>
+		<li>width: #;</li>
+		<li>text-align: center | left | right;</li>
+		<li>float: left| right;</li>
+		<li>position: absolute | static | relative</li>
+		<li>top - bottom - left - right : #px; <small> Used with absolute or relative positions</small></li>
+		<li>padding: #px #px #px #px;</li>
+		<li>margin: #px #px #px #px;</li>
+	</ol>
+	<label>Box Model Picture</label>
+	<img src="images/boxModel.gif" />
+
+	
+
+
+
+
+</body>
+</html>

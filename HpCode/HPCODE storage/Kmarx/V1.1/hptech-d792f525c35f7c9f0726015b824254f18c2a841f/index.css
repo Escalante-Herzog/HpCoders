@@ -1,0 +1,67 @@
+table.Cool, td.Cool, tr.Cool
+{
+	text-align: center;
+	font-family: 'Geo';
+	font-size: 150%;
+	color: red;
+	background-color: pink;
+	border: 2px dashed orange;
+	padding: 5px;
+	margin: 1em auto;
+}
+
+div.table
+{
+	align-items: center !important;
+	text-align: center;
+	padding:3px;
+}
+
+body.legit, th.legit
+{
+	font-family: Georgia;
+	padding: 5px;
+	width: 66%;
+}
+
+body
+{
+	background-color: #F0C000;
+	margin: 1em auto;
+}
+
+div.body
+{
+	width: 75%;
+	margin: 1em auto;
+	padding: 10px;
+	background-color: #A0F0C0
+}
+
+span.intro
+{
+	font-size: 150%;
+	text-indent: 100px;
+	font-weight: bold;
+}
+
+td.Cool
+{
+	text-decoration: underline;
+}
+
+nav
+{
+   position: fixed;
+   top: 0;
+   font-family: sans-serif;
+   width: 100%;
+}
+
+#official
+{
+	width: 66%;
+	text-align: center;
+	background-color: #F0C0E0;
+	border: 1px solid black;
+}

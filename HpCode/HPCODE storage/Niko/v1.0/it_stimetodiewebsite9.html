@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>It's Time To Die Website</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <h1>It's Time To Die, Website.</h1>
+  </header>
+  <div id="leftcolumn">
+    <nav>
+         <ul>
+	   <li><a href="ItsTimeToDieWebsite.html">Home</a></li>
+      <li><a href="It'sTimeToDieWebsite2.html">Cool Badasses</a></li>
+      <li><a href="It'sTimeToDieWebsite3.html">Preston Quotes</a></li>
+      <li><a href="It'sTimeToDieWebsite4.html">My Knife</a></li>
+      <li><a href="It'sTimeToDieWebsite5.html">Settlement</a></li>
+      <li><a href="it'stimetodiewebsite6.html">Nicolas Cage</a></li>
+      <li><a href="it'stimetodiewebsite7.html">Curb Stomping</a></li>
+      <li><a href="it'stimetodiewebsite8.html">RUN!</a></li>
+      <li><a href="it'stimetodiewebsite9.html">Coolest Face Ever</a></li>
+	  </ul>
+    </nav>
+  </div>
+  <div id="rightcolumn">
+    <div class="content"> 
+      <img src="Seth.gif" width="400" height="250" id="floatright" alt="Seth Rollins Going Crazy" onclick="changeImage()">
+	<h2>RUN!</h2>
+	<p><a href="https://www.youtube.com/watch?v=fjHGTeTtaac">Run, Bit, Run!</a></p>
+     <p id="right">Click On This Picture.</p>
+    </div>
+    <footer>Copyright &copy; 2016 Seth Rollins Approved
+    </footer>
+  </div>
+</div>
+
+<script>
+    function changeImage() {
+        var image= document.getElementById("floatright");
+        
+    alert("Click on this picture and press ok, if you think the girl on this picture is just as beautiful as the next picture");
+if (image.src.match("Gold")){ 
+    image.src = "Seth.gif";
+
+} else{
+    image.src="Gold.jpg";
+}
+
+}
+</script>
+</body>
+</html>

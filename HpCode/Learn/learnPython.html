@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HPCODERS-Python</title>
+<style>
+@import 'https://fonts.googleapis.com/css?family=Miriam+Libre|Slabo+27px';
+body{
+	overflow-x:hidden;
+	height:2500px;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+/*==============================Basic python holder*/
+h1,h2,h3,p{
+	margin:0;
+	padding: 10px 0 0 4em;
+	text-align:center;
+	display:block;
+	
+		
+}
+.displays{
+	font-size:1.5em;
+	font-family:'Verdana',serif;
+	text-align:left;
+	padding-left:4em;
+	display:block;
+	color:red;
+	font-weight:bold;
+}
+.displays:after{
+	content:":"
+}
+/*========================================================================header*/
+div.header{
+	
+	height:500px;
+	width:100%;
+	background-image:url('https://cdn.fedoramagazine.org/wp-content/uploads/2015/11/Python_logo.png');
+	background-position:center;
+	background-size:cover;
+	border-width: 0 0 2px 0;
+	border-style:solid;
+	border-color:blue;
+}
+/*=========================================Nav -con*/
+div.nav-con{
+	height:100px;
+	width:100%;
+		background-color:#E59866;
+		
+}
+button.nav-btn{
+	border-radius:50px;
+	background-color:#FC6E51 ;
+	border-width:10px;
+	border-style:solid;
+	border-color:#E9573F;
+	width:50%;
+	height:100%;
+}
+.nav-btn:hover{
+	opacity:.7;
+}
+span.nav-btn{
+	color:#4A89DC;
+	font-size:4em;
+	font-family: 'Miriam Libre', sans-serif;
+	font-weight:bold;
+}
+/*Python intro*/
+div.python-intro{
+	height:1000px;
+	width:100%;
+	background-color:#fafafa;
+	font-family: 'Slabo 27px', serif;
+		color:#99A3A4;
+}
+</style>
+</head>
+<body>
+<div class="header">
+
+</div>
+<div class="nav-con">
+<a href="learn.html"><button class="nav-btn"><span class="nav-btn">HTML</span></button></a><a href="css.html"><button class="nav-btn"><span class="nav-btn">CSS</span></button></a>
+</div>
+
+<div class="resources">
+<h2>External Resources</h2>
+<ol>
+	<li><a href="https://www.python.org/downloads/">Downloading Python <small>* Recconmend 3.1+</small></a></li>
+	<li><a href="http://www.astro.ufl.edu/~warner/prog/python.html ">Lots Of Python Code</a></li>
+	<li><a href="https://docs.python.org/2/reference/ ">Python's Site</a></li>
+</ol>	
+</div>
+
+<div>
+<h2>Getting Python To Start</h2>
+<p>I would advise that you either download python and use the Python IDLE interactive console or go to the Eclipse Market Place</p>
+<ol>
+	<h3>Downloading From Eclipse</h3>
+	<li>Go to Eclipse Market Place</li>
+	<li>On Eclipse Toolbar go to Help</li>
+	<li>On DropDown Menu go To Eclipse MarketPlace</li>
+	<li>Go to Popular Tab on Market</li>
+	<li>Look For: (PyDev  - Python IDE for Eclipse and Click Install)<li>
+	<li>Check the Box's and Import all it wants</li>
+	<li>Create New Workstation and Define FilePath</li>
+	<li>IF you need an intepreter click on install interpreter - Quick Install. <small>* Advise Sticking to REG Python and !IronPython</small></li>
+	<li>Now Python's Enviorment on Eclipse. You now want to make a Python Package<br> This is where all your Python modules will be stored</li>
+	<li>Make a Python Modules within the Package you just created. Name th Modules whatever you want.</li>
+	<li>Open up Module. Now whatever you write in there can be ran in Python Form.</li>
+	<li>Write your first Line of Code and Run it.</li>
+	<li>print("Hello, world") . <br>Now Press The Play Button and The rest is Magic. :)</li>
+</ol>
+</div>
+<hr>
+<div class="updated">
+<pre style="padding-left: 10px;">
+<code>
+	#Comments in Python!
+#Great Website will alot of Code - ( http://www.astro.ufl.edu/~warner/prog/python.html ) 
+# From the People Who create Python - ( https://docs.python.org/2/reference/ )
+
+import math #Import that Math modules to recieve its abilities
+from builtins import str
+from ctypes.wintypes import BOOL
+from xmlrpc.client import boolean
+from _ast import If
+
+firstName = "Marcelo"
+lastName = "Escalante"
+name = firstName + " " + lastName
+
+print("My name is " + name)
+
+
+#Arithmetic Practice
+
+mult = 4 * 3
+add = 4 + 3
+subtract = 4 - 3
+div = 4 / 3
+
+print("Arithmetic with the Numbers 4 and 3. +" + " \n Multiplying is " + str(mult) + " \n Adding is " + str(add) + " \n Subtracting is  " + str(subtract) + "\n dividing is " + str(div))
+
+print("End Of Arithemetic -----------------------------------------------------")
+
+
+#Augmented Operators
+
+total = 0
+total += 20     #This will add 20 to the total and make it equal
+
+
+#Desinging and using Functions
+
+#Built-In f(x) that returns absolute value of parameter
+abs(4)
+
+#This Function take in a paramter equal to x. Then multiplies it by 2 and sets x to the total . then it returns x to you.
+def f(x):
+    x = 2 * x
+    return x  
+
+
+# A function that actually has functionality
+
+def days_diff(day1, day2):
+    """ 
+    (int,int) -> int    #Header- Tells Programmer the types for Parameters
+    
+    #Document to tell Programmer what your F(x) does
+    
+    Returns the numbers of days between day1 - day2 which range from 1-365 days.
+    
+    
+    >>>days_diff(200,224)        #Tests For Programmer to See
+    24
+    >>>days_diff(50,50)
+    0
+    """
+    return day2 - day1  #This is the actual peice of code that get ran
+
+print("Oh Man its the New years and we have "  + str(days_diff(10, 364)) + " days Until Chrismass")
+help(days_diff) #This should Print what we Told the Programmer what the function does in the F(x) header
+
+
+print("End Of Functions-----------------")
+
+#Taking in Info From Keyboard
+UserName = input("What is your Name?")
+print("That's a cool name " + UserName)
+
+
+
+
+
+#Boolean Types - Runs on Basic Logic
+
+True and True #True
+True and False #False
+True or False #True
+True or True #True
+
+cold = input("Is it cold today? ")
+#If true print this . Or else Print that
+
+
+#Loops In Python
+
+#for j in range(10): print "Value number " + str(j) +" is "+value[j]
+
+"""
+
+for j in range(10,0,-2):
+   x = x + j
+   print x
+
+while (b < a):
+print "b is less than a."
+b=b+1
+
+for j in range(0,10):
+    while(k < j):
+     print "j = " + str(j) + " k = "+str(k)
+     if (j == 1): break
+     k=k+1
+   print "j equals k or j equals 1"
+
+a = ["abc","def","ghi"]
+for x in a:
+   print x
+
+"""
+
+
+</code>		
+</pre>
+</div>
+<br>
+<!--New Section-->
+<div class="python-intro">
+ <h1>At the time of this writing I am not even close to being an expert of python, so this is more for me</h1>
+ <p>While I might have web design down front end wise, getting into a back-end langauge like python is daunting. But as you'll see that once you understand certain blocks of each langauge the rest will come easily.</p>
+ <p>Your gonna notice that many languages including arrayName ['JavaScript','Python3','PHP','ext'] Like arrays, Which is like a variable that holds info.</p>
+ <h1>Function</h1>
+ <p>Functions are usefull when you need to do a certain set of commands a bunch of times, like converting celsius to farrenhiet for data being sent from Us to Canada weather station</p>
+ <h3>Function syntax</h3>
+ <pre>
+														======!!#Comments go under!!=======
+def functionName(parameter1,parameter2):				Function Header(this is where your put your parameters and define your functionName) 														
+	""" (init,float) -> number					(this is called a docstring tells, humans how your function works with the help(functionName))
+															(also tells human that first parameter1 is a interger, and parameter2 is a float)
+...		Returns the parameter1 multiplied to parameter2				(like a comment telling user directly what function does)
+...	
+...		>>> functionName(2,4)									(this is called a test, becuase it shows human how your function should work and maybe certian errors)
+...		8
+...		>>> functionName(122,2)
+...		144
+...		>>> functionName(0,12421421)
+...		0
+...		"""
+...		return (parameter1 * parameter2)				(Called the body becuase this is the part of the function where its being told what to do, like the real instructions)
+
+functionName(102,6)						(funciton call: or the way to use and reuse your funciton)
+608
+ 
+ </pre>
+</div>
+<div class="footer">
+
+</div>
+</body>
+</html>

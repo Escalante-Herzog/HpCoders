@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>HPCODERS-Javascript</title>
+<!--<script type="text/javascript" src="basics.js"></script>-->
+
+<style type="text/css">
+	body{
+		width: 1200px;
+		margin: 0 auto;
+		background-color: #fffaf0;
+	}
+	pre{
+		font-size: 16px;
+		background-color: #d4d4d4;
+		overflow-x: scroll;
+		border-radius: 6px;
+		text-align: left;
+	}
+	div.main-content{
+		width: 65%;
+		float: right;
+		display: inline-block;
+
+	}
+	div.navbar{
+		text-align: left;
+		width: 20%;
+		float: right;
+		position: fixed;
+		display: inline-block;
+		background-color: #d4d4d4;
+		border-radius: 5px;
+		
+
+	}
+	div{margin:25px 0px;}
+	.title{font-size: 40px;color: #a23;}
+	nav a{
+		display: block;
+		padding: 5px 0;
+	}
+	aside{font-size: 24px;font-weight: 500;color:red;text-align: center;}
+
+	aside:before{content:"Remember!"}
+</style>
+<script type="text/javascript">
+
+	
+	function numGame(){
+		
+		window.alert("Welcome to My Guessing Game. Its Simple Guess A number between 0-100. GLHF \n -Harshmelow 16'-");
+		
+		var ans = Math.floor((Math.random() * 100) + 1);  //Answer Created Randomly
+		var UserGuess = prompt("Guess A Number");	// Holds User's Guess
+
+
+		//This runs until the User Guesses correctly
+		while(UserGuess != ans){
+			var UserGuess = prompt("Guess A Number");
+
+			if (UserGuess == ans) {
+				alert("Corret! Here's A Cookie!");
+			}
+			else if(UserGuess < ans){
+				alert("Too Low");
+			}
+			else if(UserGuess > ans){
+				alert("Too High");
+			}
+			else{
+				alert("Nice Ron. \n What I can't Sneeze");
+			}
+		}
+
+
+
+		 console.log(ans);
+	}
+
+
+
+	function popJQ(){
+		alert("This lesson will teach you everything about JQUERY in 1 Hour. \n You'll Have A blast and you'll learn fast!");
+	}
+
+	function popLogo(){
+		alert("Your clicked on the Logo Fool!");
+	}
+	/*Rights Of Anyone who ever Programmed Lol... Harshmellow twas here!! 16'*/
+
+
+</script>
+<!--JQUERY CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="navbar">
+	<nav>
+		<ol style="list-style:cambodian;">
+			<a class="navbar-brand" href="http://www.hpcoders.com"><img src="../images/logos/logoBlack.png" height="auto" width="auto" id="logo" alt="HpCOdeLogo" /></a>
+			<a href="#power">Javascript's Power</a>
+			<a href="http://www.w3schools.com/jsref/default.asp" target="_blank">JavaScript MasterPage</a>
+			<a href="https://www.codecademy.com/learn/jquery" onclick="popJQ()" target="_blank">JQuery</a>
+			<a href="#basics"><h2>Basic's</h2></a>
+			<a href="#typeNum"><li>Numbers</li></a>
+			<a href="#typeString"><li>Strings</li></a>
+			<a href="#typeBool"><h3>Boolean's</h3></a>
+			<a href=""><li>Operators(!=)</li></a>
+			<a href="#equality"><li>(=) vs (==) vs (===)</li></a>
+			<h3>Arrays,Objects and Loops!</h3>
+
+			<h2>The Fun Stuff</h2>
+			<a href="#funStuff"><li>Prompts &amp;&amp; Alerts</li></a>
+			<a href="#eventListener"><li>Event Listeners</li></a>
+			<h2>Advanced</h2>
+			<a href="#basics-arrays"><li>Array's</li></a>
+			<a href="#objects"><li>Objects In JavaScript</li></a>
+			<h2>Forms and Modulars</h2>
+			<a href="#forms">Forms</a>
+			
+			
+		</ol>
+	</nav>
+</div>
+
+<div class="main-content">
+<h1 style="font-size: 60px;color: #a23;">Documentation of Javascript <small>HPCODERS</small></h1>
+<div>	
+<a name="power"></a>
+	<h2 class="title">Power Of Javascript</h2>
+	<button onclick="numGame()">Click me to Play Game</button>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('button.src').click(function(){
+				$('p.src,pre.src').toggle();
+			});
+		});
+	</script>
+	<button class="src">Game's Source Code</button>
+
+	<br>
+<p class="src" style="display: none !important;">
+<pre class="src">
+	Harshmelow Guessing Game Source Code
+
+
+	function numGame(){
+		
+		window.alert("Welcome to My Guessing Game. Its Simple Guess A number between 0-100. GLHF \n -Harshmelow 16'-");
+		
+		var ans = Math.floor((Math.random() * 100) + 1);  //Answer Created Randomly
+		var UserGuess = prompt("Guess A Number");	// Holds User's Guess
+
+
+		//This runs until the User Guesses correctly
+		while(UserGuess != ans){
+			var UserGuess = prompt("Guess A Number");
+
+			if (UserGuess == ans) {
+				alert("Corret! Here's A Cookie!");
+			}
+			else if(UserGuess < ans){
+				alert("Too Low");
+			}
+			else if(UserGuess > ans){
+				alert("Too High");
+			}
+			else{
+				alert("Nice Ron. \n What I can't Sneeze");
+			}
+		}
+		
+
+
+		
+
+		 console.log(ans);
+	}
+</pre>
+</div>
+
+<h3>Scripts within &lt;Head&gt; Tag</h3>
+	<p>Create A new File and save it as FileName.js. Now Embed it into your HTML file so your Javascript and HTML are now linked.</p>
+	<pre>
+		&lt;head&gt;
+			&lt;script type="text/javascript" src="intro.js"&gt;&lt;/script&gt;
+		&lt;/head&gt;
+	</pre>
+	<h1>Basics In Javascript</h1>
+<div>
+		<h2>How A JavaScript File Looks</h2>
+		
+		<code>
+			<pre>
+			//This Is a single-Lined Comment
+//These are variavbles that use Strings,Numbers,And boolean
+var name = "Marcelo";
+var age = 16;
+var alive = true;
+
+var marcelo =  name + "" + age + "" + alive;
+
+console.log();	//This print things out to your console
+console.log(marcelo); 
+
+//Arithmetic
+
+var sumOf = 3 * 5;
+/* Multi-Lined Comment
+Comment
+Goes Multiple
+Lines
+*/
+
+
+	3+5
+	3-5
+	3*5
+	3/5
+	3**5
+	
+	Modulo
+	3%5
+	=>0
+
+//Looping In Javascript
+for(i=0;i<101<i++){
+
+	if(i % 3){
+		console.log(i);
+	}
+	else{
+		console.log("Not true");
+	}
+}
+
+	//Loop that runs until Condition is FALSE
+	while(condition){
+		console.log("Still Going");
+	}
+
+//Logic in Javascript 
+
+if (age < 21) {
+	var output = "this guy is too young";
+}
+else if (age == 21){
+	var output = "First time drinking buddy?";
+}
+else if(age >= 21){
+	var output = "Hey have drink";
+}
+else{
+	var output = "An error occured";
+}
+
+
+//An Array
+var marceloArray = ["marcelo",16,true];
+
+console.log(sumOf);
+
+document.write(output);
+
+
+			</pre>
+		</code>
+</div>
+
+<!--
+
+
+Basic's ALong with TYPES in Javascript
+
+
+
+-->
+
+<a name="basics"></a>
+<div>
+	<h2 class="title">Types In Javascript</h2>
+	<br>
+	<a name="typeNum"></a><a name="typeString"></a>
+	<h3>Numbers In Javascript</h3>
+	<aside>Before Creating Any Varaible you need the <b><i>var</i></b> Keyword before it!</aside>
+<pre>
+	<code>
+		//First I will Present A variable With a <b>Number Value</b>
+
+		var age =  21;
+
+		//Next A boolean Value which can either be True Or False
+
+
+		var isAlive = true;
+
+		//Lastly A string that contains characters that are not numberical !
+
+		var name = "marcelo escalante";
+
+		//Printing our message to the console!
+
+		console.log();
+
+		//How Do we print Numbers and Strings together
+
+		console.log(name + age);
+
+		=> marcelo escalante 21
+	</code>
+</pre>
+		<aside>Notice how I end all my <i>"Statements"</i> with a (;). That tells Javascript im done declaring stuff on that line.</aside>
+		<br>
+		<a name="typeBool"></a>
+		<h3>Boolean</h3>
+		<p>Boolean is something that is Universal to all <a href="http://www.harshmelow.com/Projects/greatpeople/AlanTuring.html#turingcomplete" target="_blank">TURING COMPLETE</a> languages. Booleans are great when working with logic as they are either in two states. True OR false.</p>
+<pre>
+<p>Example of BOOLEAN being USED.</p>
+	<code>
+		var isAlive = true;
+
+		if(isAlive == true){
+			console.log("This Person Does not need a Funeral ");
+		}
+		else if(isAlive == true){
+			console.log("This person is clearly dead and needs a funeral");
+		}
+	</code>
+</pre>
+
+<h2 class="title">Operators In Boolean</h2>
+
+<ol>
+	<li>&amp;&amp;</li>
+	<li>||</li>
+	<h3>Comparisons</h3>
+	<li> < or <= </li>
+	<li> > or >= </li>
+	<li>!(true) ==   		//False becuase not true is false</li>
+	<li>3 != 3   		//False becuase 3 does equal 3</li>
+</ol>
+<a name="equality"></a>
+<p>(===) checks that both the value and type of the expression your checking is true.<br><b>Basically</b> it checks to see two numbers are stored the same. Where 1 is an interget 1.0 is a floting number. Meaning that they are not equal using (===) but equal (==)</p>
+<pre><b>Difference Between (==) vs (===) in JavaScript</b></p>
+<p>	0 == false   // true
+	0 === false  // false, because they are of a different type
+	1 == "1"     // true, automatic type conversion for value only
+	1 === "1"    // false, because they are of a different type
+	null == undefined // true
+	null === undefined // false
+	'0' == false // true
+	'0' === false // false
+</pre>
+
+</div>
+
+<div>
+	<a name="funStuff"></a>
+	<h2 class="title">Fun Stuff</h2>
+<pre>
+	<code>
+	//Targets the Window and makes a Popup Appear
+		window.alert("Message in here");
+
+	//Creates Popup that takes in User Input
+
+		window.prompt("What\'s you age?");  //Why the (\) well I needed to escape that character in Javascript. Its used so javascript doesnt confuse it as keywords or another string
+
+
+	</code>
+</pre>
+
+<a name="eventListener"></a>
+<h2>Event Listener's</h2>
+
+<p>Event Listener's Are used when you want a function to be ran when a user interact with one of your html elements.</p>
+<pre>
+<p>Example!</p>
+	<code>
+		&lt;div&gt;
+			&lt;img src="images/imageName.jpg" onclick="myFunction()" /&gt;
+		&lt;/div&gt;
+
+		JS-
+
+		function myFunction(){
+			alert("Your clicked me fool");
+		}
+
+		/*This Runs myFunction() when and whatever code is inside the code block whenever the User clicks the image!*/
+	</code>
+</pre>
+<ol>
+<h3>Event Listener's</h3>
+<aside> JQUERY accomplishes this faster and cleaner, but I might as well show you this, so your not confused when you see in other people's code.</aside>
+	<p><b>Click The Image.. DO IT!</b></p><img src="../images/logos/logoBlack.png" onclick="popLogo()">
+	<li>onclick=""</li>
+	<li>onchange=""</li>
+	<li>oncancel=""</li>
+	<li>onblur=""</li>
+	<li>onclose=""</li>
+	<li>ondblclick</li>
+	<li>ondrag=""</li>
+	<li>onmouseenter=""</li>
+	<li>onmouseleave=""</li>
+	<li>ext..........</li>
+
+	
+</ol>
+</div>
+
+<hr>
+<!--
+
+Forms Start
+
+-->
+<a name="forms"></a>
+<h2 class="title">Forms and Validation</h2>
+
+<script type="text/javascript" src="js/test1.js"></script>
+<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+	Name: <input type="text" name="fname">
+	<input type="submit" value="Submit">
+</form>
+<!--
+
+
+Fun Stuff
+
+-->
+<!--
+
+Arrays In Javascript
+
+
+-->
+<a name="basics-arrays"></a>
+	<h2>Basic Arrays</h2>
+	<p>Arrays are great because they can hold any value type and multiple varaibles which can be 	mutated later on.</p>
+	
+	<code>
+	/*Basic Array Syntax*/
+		<pre>
+			var arrayName = ["Marcelo",16,false]; //Values in here seperated by (,)
+		</pre>
+	</code>
+	<h2>Creating Scripts &amp; Using them</h2>
+	<p>There are two ways to embed scripts into your code. Either putting them inside the &lt;head&gt; 	tag or putting them inside your &lt;body&gt; tag. For now were going to put all our scripts inside 	the &lt;head&gt; tag so all of our scripts load as soon as the page is recieved.(We dont want to 	get to used to this practice though!)</p>
+	
+	
+	<h2 class="title">2D arrays</h2>
+	<p>A 2D array is really just an array within an array. Why is this usefull you ask?</p>
+	<h4>Basic 2D Array</h4>
+	<code>
+		<pre>
+			
+		</pre>
+	</code>
+
+	<h3>Jagged Arrays</h3>
+	<p>This is a concept that is shared by other programming languages such as java. But inlike Java and most other languages, 2D arrays are allowed to be <b>Jagged</b>. Meaning that there dimension's do not have to make a square.</p>
+
+	<hr>
+	<!--ObJects in Javascript-->
+	<a name="objects"></a>
+
+	<h2 class="title">Objects in Javascript</h2>
+	<p>Objects have keys and values assigned to them. Using an array you can target certain keys.<br>
+	Objects can be assigned any value type including (boolean,nums,strings)</p>
+	<code>
+	/*Syntax for Javascript Objects using Arrays and Literals*/
+	<pre>
+	
+	var me = {
+		name: "Marcelo",
+		age: 16,
+		isAlive: true,
+	};
+	</pre>
+	</code>
+	
+	<h2>Contructors as Objects in Javascript</h2>
+	
+	<code>
+		<pre>
+	var me = {
+	    name: "marcelo",
+	    age: 16,
+	};
+	
+	//This creates an Object called me
+
+	var me = new Object();
+	
+	me["age"] = 17;
+	me.name = "Marcelo";
+		</pre>
+	</code>
+	<br><br><br>
+<!--
+
+
+	Resources
+
+-->
+<div>
+	<h2>Resources</h2>
+	<ol>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank"><li>Arrays In Javascript</li></a>
+		<a href="http://www.w3schools.com/js/js_scope.asp" target="_blank"><li>Scope</li></a>
+		<a href="http://www.w3schools.com/js/default.asp" target="_blank"><li>Javascript W3</li></a>
+	</ol>
+</div>
+	<footer>
+		<center>
+			<p>A Quick Guide by: <a href="http://www.harshmelow.com" target="_blank"><small><i>	Harshmellow</i></small></a></p>
+		</center>
+	</footer>
+</div>
+</body>
+</html>

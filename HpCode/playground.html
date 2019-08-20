@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>HPCODE-Playground</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+	/*
+		Navbar 
+	*/
+	div.navbar{
+		width: 30%;		/*Takes 30% of left side*/
+		height: 100%;	/*Spans whole page*/
+		
+		background-color: #f6f6f6;
+		float: left;	/*Be placed as far left*/
+	}
+
+	nav a{
+		display: block;
+		padding:10px 0;
+	}
+
+	div.hidden{
+		display: none;
+
+	}
+	/*
+		Content-Snippets
+	*/
+	div.content{
+		width: 70%;
+		float: left;
+	}
+</style>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('.static').click(function(){
+			$('.Hidden').toggle();
+			});
+		});
+</script>
+</head>
+<body>
+<!-- IF there was anywhere you should experiment. Here it is!-->
+
+<div class="container-fluid main-content">
+	<div class="navbar">
+		<nav class="row col-md-12">
+			<a><span class="glyphicon glyphicon-plus static"></span>Code Snippets</a>  <!--Click to toggle O/I the code snippets under-->
+			<a href="">Games</a>
+			<a href="">More Cool Stuff</a>
+		</nav>
+	</div>
+
+
+	<div class="content">		<!--Content will go below-->
+	<!--Content or Code Snippets go here-->
+		<div class="row snippet col-md-12">
+			<p class="Hidden">Hidden Material which can be toggled on and off</p>
+		</div>
+
+	</div>
+</div>
+
+
+</body>
+</html>
+
+
+<!--
+
+
+
+Date				Time-In			Time-Out
+11/29/16			10:40			11:46PM		
+
+
+
+-->
